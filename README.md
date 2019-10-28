@@ -1,9 +1,12 @@
 # SimpleServer
 
 To whom it may concern, what has been done so far was from a simple get
-started guide I (Chad Windham) found [Visit Page](https://www.jungledisk.com/blog/2018/03/19/tutorial-a-simple-http-server-in-elixir/)
+started guide I (Chad Windham) found [Here](https://www.jungledisk.com/blog/2018/03/19/tutorial-a-simple-http-server-in-elixir/)
+
+Latest update (Oct. 28, 2019) Super simple server is up and running. With current code you can run `iex -S mix` and the server will be up and running. From your terminal you can run `curl -v "http://127.0.0.1:8085/hello"` to get a response! You can also use your browser and visit `http://localhost:8085/hello` to get the response of "world".
 
 ## Description
+
 Chad and Chris are putting together a small project to learn the Elixir language, which
 runs on the ERLANG virtual machine and is really cool. The project will be a very simple
 version of task/work ticket management similar to JIRA but hopefully simplier and easier
@@ -28,4 +31,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/simple_server](https://hexdocs.pm/simple_server).
-
