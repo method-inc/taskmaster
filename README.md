@@ -3,7 +3,11 @@
 To whom it may concern, what has been done so far was from a simple get
 started guide I (Chad Windham) found [Here](https://www.jungledisk.com/blog/2018/03/19/tutorial-a-simple-http-server-in-elixir/)
 
-Latest update (Oct. 28, 2019) Super simple server is up and running. With current code you can run `iex -S mix` and the server will be up and running. From your terminal you can run `curl -v "http://127.0.0.1:8085/hello"` to get a response! You can also use your browser and visit `http://localhost:8085/hello` to get the response of "world".
+Latest update (Oct. 28, 2019) Super simple server is up and running. With current code you can run
+`iex -S mix` and the server will be up and running. From your terminal you can run
+`curl -v "http://127.0.0.1:8085/hello"` to get a response! You can also use your browser and
+visit `http://localhost:8085/hello` to get the response of "world". Also, if you want to test out
+a basic post. Run `curl -v -H 'Content-Type: application/json' "http://localhost:8085/post" -d '{"message": "hello world" }'` from your terminal.
 
 ## Description
 
