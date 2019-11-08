@@ -1,6 +1,6 @@
 defmodule SimpleServer do
   @moduledoc """
-  Documentation for SimpleServer.
+  Provides a function `hello/1` to greet a human
   """
 
   @doc """
