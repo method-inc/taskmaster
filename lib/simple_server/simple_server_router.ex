@@ -15,6 +15,19 @@ get "/hello" do
   send_resp(conn, 200, "world")
 end
 
+# Sending some actual files now
+get "/readme" do
+  Plug.Conn.send_file(conn, 200, "README.md")
+end
+
+get "/firsthtml" do
+  Plug.Conn.send_file(conn, 200, "practice.html")
+end
+
+get "/otherpath" do
+  Plug.Conn.send_file(conn, 200, "lib/simple_server/static/other_practice.html")
+end
+
 # Basic example to handle POST requests with a JSON body
 post "/post" do
 
