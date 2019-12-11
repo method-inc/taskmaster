@@ -6,6 +6,7 @@ defmodule SimpleServer.MixProject do
       app: :simple_server,
       version: "0.1.0",
       elixir: "~> 1.9",
+      build_embedded: Mix.env == :prod,
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -27,7 +28,9 @@ defmodule SimpleServer.MixProject do
       {:cowboy, "~> 1.0"},
       {:plug, "~> 1.5"},
       {:plug_cowboy, "~> 1.0"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:earmark, "~> 1.2", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev},
     ]
   end
 end
