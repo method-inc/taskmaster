@@ -7,10 +7,8 @@ defmodule SimpleServer.Router do
   require Logger
   plug(Plug.Logger, log: :debug)
   plug(:match)
-  plug Plug.Static,
-  at: "/pub",
-  from: :simple_server
   plug(:dispatch)
+  plug Plug.Static, at: "/", from: "pub"
 
   # Simple GET Request handler for path /hello
   get "/hello" do
