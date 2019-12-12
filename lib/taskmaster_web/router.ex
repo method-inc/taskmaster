@@ -15,8 +15,13 @@ defmodule TaskmasterWeb.Router do
 
   scope "/", TaskmasterWeb do
     pipe_through :browser
-
     get "/", PageController, :index
+  end
+
+  scope "/hello", TaskmasterWeb do
+    pipe_through :browser
+    get "/", HelloController, :index
+    get "/:name", HelloController, :show
   end
 
   # Other scopes may use custom stacks.
