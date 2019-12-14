@@ -10,7 +10,8 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :taskmaster, TaskmasterWeb.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [scheme: "https", host: "taskmaster2000.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
